@@ -1,4 +1,5 @@
 import time
+import random
 def tenSeconds():
     input("Press enter to begin the game, then press enter once you believe 10 seconds have passed.")
     start=time.time()
@@ -48,15 +49,33 @@ def fifteenSeconds():
         print("Good job!")
 
 
+
+def randomSeconds():
+    randTimer = random.randint(1,25)
+    if randTimer>19:
+        randTimer = random.randint(20,50)
+    randbutSTRING = str(randTimer)
+    input("Press enter to begin the game, then press enter once you believe "+ randbutSTRING+  " seconds have passed.")
+    start=time.time()
+    input("Enter to finish")
+    end=time.time()
+    time_elapsed=end-start
+    time_elapsed=(round(time_elapsed, 3))
+    print("You took", time_elapsed, "seconds!")
+    if time_elapsed>randTimer-1 and time_elapsed<randTimer+1:
+        print("Good job!")
+
 done=0
 while done==0:
-    whatGame=input("What waiting game would you like to play? 5 seconds, 10 seconds, 15 seconds, or a custom amount of time?")
+    whatGame=input("What waiting game would you like to play? 5 seconds, 10 seconds, 15 seconds, a custom amount of time, or a random amount of time?")
     if whatGame == "custom" or whatGame=="Custom":
         custom = int(input("How long?"))
         if isinstance(custom, str):
             print("This is an invalid input.")
         else:
             customSeconds(custom)
+    elif whatGame== "random" or whatGame == "Random":
+        randomSeconds()
     else:
         whatGame=int(whatGame)
         if whatGame == 5:
