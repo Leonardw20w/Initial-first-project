@@ -2,7 +2,7 @@
 ## 17/09/2026
 
 This is my personal project, app.py is a ***test*** to learn timing functions. 
-<br> Math Speed Blitz.py was the ***intended*** final game.
+<br> Math Speed Blitz.py was the ***intended*** final game. **IT IS NOT DONE**
 <br> This "README" is also a test.
 1. I've figured out Italics
 2. I've figured out bold text
